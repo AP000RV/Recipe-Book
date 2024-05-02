@@ -36,57 +36,6 @@
 }
 
 
-
-/* ------///----/ */
-
-
-/* 
-.card-item{
-    background: rgb(0, 0, 0);
-    width: 20vw;
-    height: 35vh;
-    cursor: pointer;
-    display: flex;
-    flex-wrap: nowrap;
-    transition: all 0.3s;
-
-    &:hover{
-        transform: scale(1.1);
-        transition: all 0.3s;
-    }
-}
-
-.card-top{
-    height: 200px;
-    width: 200px;
-    background-color: rgb(147, 78, 78);
-
-    img{
-        width: 40%;
-        height: 60%;
-    }
-}
-
-.card-bottom{
-    padding: 10px;
-}
-
-.card-info{
-
-    color: white;
-
-    h4{
-        font-size: 22px;
-        font-weight: 400px;
-        margin-bottom: 10px;
-    }
-} */
-
-/* +++++++++++++++++++++++++++-------------------------++++++++++++++++++ */
-
-
-
-
 .container {
   display: grid;
   width: 25vw;
