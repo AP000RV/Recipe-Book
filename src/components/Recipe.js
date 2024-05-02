@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const Recipe = ({ key, title, ingredients, image }) => {
   return (
-    <div className="recipeItem">
-      <h1>{title}</h1>
-      <ul>
-        {ingredients.map((ingredient) => (
-          <li>{ingredient.text}</li>
-        ))}
-      </ul>
-      <img src={image} alt="" />
+    <div className="container">
+      <div className="card">
+        <img src={image} alt="" />
+
+        <div className="description">
+          <h4>{title}</h4>
+          <ul>
+            {ingredients.map((ingredient) => (
+              <li>{ingredient.text}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

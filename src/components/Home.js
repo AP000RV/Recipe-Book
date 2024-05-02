@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Recipe from "./Recipe";
+import RecipeList from "./Recipe";
 
 const APP_ID = "f1fe2133";
 const APP_KEY = "d41a56678cdcdd085c00ace3cabeb636";
@@ -7,7 +7,7 @@ const APP_KEY = "d41a56678cdcdd085c00ace3cabeb636";
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("paneer");
 
   const getRecipes = async () => {
     const res = await fetch(
@@ -48,16 +48,14 @@ const Home = () => {
         </button>
       </form>
       <div className="recipes">
-        <div className="recipe">
-          {recipes.map((recipe) => (
-            <Recipe
-              key={recipe.recipe.ingredients.foodId}
-              title={recipe.recipe.label}
-              image={recipe.recipe.image}
-              ingredients={recipe.recipe.ingredients}
-            />
-          ))}
-        </div>
+        {recipes.map((recipe) => (
+          <RecipeList
+            key={recipe.recipe.ingredients.foodId}
+            title={recipe.recipe.label}
+            image={recipe.recipe.image}
+            ingredients={recipe.recipe.ingredients}
+          />
+        ))}
       </div>
     </div>
   );
